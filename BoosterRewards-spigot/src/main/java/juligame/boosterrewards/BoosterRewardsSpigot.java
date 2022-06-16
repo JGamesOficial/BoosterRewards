@@ -30,8 +30,47 @@ public final class BoosterRewardsSpigot extends JavaPlugin implements PluginMess
     @Override
     public void onEnable() {
         plugin = this;
-        Bukkit.getMessenger().registerOutgoingPluginChannel(this, "Return");
-        Bukkit.getMessenger().registerIncomingPluginChannel(this, "Return", this);
+        switch (Bukkit.getBukkitVersion())
+        {
+            // 1.8.x - 1.12.x
+            case "1.8":
+            case "1.8.1":
+            case "1.8.2":
+            case "1.8.3":
+            case "1.8.4":
+            case "1.8.5":
+            case "1.8.6":
+            case "1.8.7":
+            case "1.8.8":
+            case "1.8.9":
+
+            case "1.9":
+            case "1.9.1":
+            case "1.9.2":
+            case "1.9.3":
+            case "1.9.4":
+
+            case "1.10":
+            case "1.10.1":
+            case "1.10.2":
+
+            case "1.11":
+            case "1.11.1":
+            case "1.11.2":
+            case "1.12":
+            case "1.12.1":
+            case "1.12.2":
+
+                Bukkit.getMessenger().registerOutgoingPluginChannel(this, "return");
+                Bukkit.getMessenger().registerIncomingPluginChannel(this, "return", this);
+                break;
+
+            // 1.13 ++
+            default:
+                Bukkit.getMessenger().registerOutgoingPluginChannel(this, "namespace:return");
+                Bukkit.getMessenger().registerIncomingPluginChannel(this, "namespace:return", this);
+        }
+
         UsingBungee = false;
         Bukkit.getConsoleSender().sendMessage(name+" Waiting player to init plugin.");
         getServer().getPluginManager().registerEvents(new Events(), this);

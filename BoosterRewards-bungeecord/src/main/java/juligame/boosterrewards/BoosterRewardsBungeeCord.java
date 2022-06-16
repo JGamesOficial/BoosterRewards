@@ -34,7 +34,7 @@ public final class BoosterRewardsBungeeCord extends Plugin implements Listener {
     public void onEnable() {
         plugin = this;
 
-        BungeeCord.registerChannel("Return"); // Here, we are registering the channel. This channel name will be sent to Bukkit and Bukkit will check if the incoming message is from this channel and if so, execute our cmd.
+        BungeeCord.registerChannel("return"); // Here, we are registering the channel. This channel name will be sent to Bukkit and Bukkit will check if the incoming message is from this channel and if so, execute our cmd.
         BungeeCord.getPluginManager().registerCommand(this, new CommandClass()); // Registering the command.
         BungeeCord.getPluginManager().registerCommand(this, new ForceCommandClass()); // Registering the listener.
 
@@ -165,7 +165,7 @@ public final class BoosterRewardsBungeeCord extends Plugin implements Listener {
             e.printStackTrace();
         }
         // Note the "Return". It is the channel name that we registered in our Main class of Bungee plugin.
-        server.sendData("Return", stream.toByteArray());
+        server.sendData("return", stream.toByteArray());
     }
 
 
