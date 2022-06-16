@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Main-Class: 
+Class-Path: slf4j-api-1.7.36.jar jackson-annotations-2.13.2.jar commons-
+ collections4-4.4.jar nv-websocket-client-2.14.jar kotlin-stdlib-common-
+ 1.4.0.jar kotlin-stdlib-1.4.10.jar trove4j-3.0.3.jar JDA-5.0.0-alpha.11
+ .jar okhttp-4.9.3.jar annotations-23.0.0.jar jackson-core-2.13.2.jar ja
+ ckson-databind-2.13.2.2.jar okio-2.8.0.jar jsr305-3.0.2.jar
+

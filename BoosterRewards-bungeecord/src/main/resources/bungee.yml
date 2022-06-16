@@ -1,0 +1,4 @@
+name: BoosterRewards
+version: '${project.version}'
+main: juligame.boosterrewards.BoosterRewardsBungeeCord
+

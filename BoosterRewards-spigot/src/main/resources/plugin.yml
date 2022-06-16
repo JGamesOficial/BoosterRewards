@@ -1,0 +1,10 @@
+name: BoosterRewards
+version: '${project.version}'
+main: juligame.boosterrewards.BoosterRewardsSpigot
+api-version: 1.18
+commands:
+  link:
+    description: link to discord acc.
+  brforce:
+    description: force to run a command.
+    permission: boosterrewards.force
